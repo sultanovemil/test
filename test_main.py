@@ -1,5 +1,5 @@
 import os
-from streamlit.testing import TestClient
+from streamlit.testing.v1 import TestClient
 
 def test_my_app():
     # Получаем значение секрета из переменной окружения
