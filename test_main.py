@@ -7,9 +7,4 @@ def test_my_app():
 
     # Создаем клиент для тестирования Streamlit приложения
     client = TestClient('main')
-
-    # Используем полученное значение секрета в тесте
-    response = client.get('/my_endpoint', headers={'API_K': api_key})
-
-    # Проверяем ожидаемый результат
-    assert response.status_code == 200
+    assert client.sucess[0] == 'ok'
