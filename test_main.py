@@ -1,10 +1,10 @@
 import os
-from streamlit.testing.v1 import TestClient
 
-def test_my_app():
-    # Получаем значение секрета из переменной окружения
-    api_key = os.environ['API_K']
+from streamlit.testing.v1 import AppTest
 
-    # Создаем клиент для тестирования Streamlit приложения
-    client = TestClient('main')
-    assert client.sucess[0] == 'ok'
+a = os.getenv('API_K')
+# Just a simple test
+def test_url_input():
+    at = AppTest.from_file('main.py', default_timeout=30) 
+    at.run()
+    assert st.success[0].value == 'ok'
