@@ -7,5 +7,5 @@ def test_fun():
   at.secrets['API_KR'] = os.getenv('API_KR')
   at.run()   
   assert at.success[0].value == 'good'
-  assert at.success[0].value == 'ok'
+  assert at.success[1].value == 'ok'
 
