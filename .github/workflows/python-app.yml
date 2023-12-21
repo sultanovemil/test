@@ -24,6 +24,6 @@ jobs:
 
     - name: Run tests
       env:
-        API_K: ${{ secrets.API_K }}
+        API_KR: ${{ secrets.API_KR }}
       run: pytest
       
